@@ -15,6 +15,6 @@ class Test_french_to_english(unittest.TestCase):
         self.assertEqual(french_to_english("Bonjour"), "Hello")
         #Test returns an empty string 
         self.assertNotEqual(french_to_english(0), 0)
-unittest.main()
-
+if __name__ == "__main__":
+    unittest.main()
 

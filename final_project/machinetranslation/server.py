@@ -13,12 +13,12 @@ def englishToFrench():
 @app.route(/frenchToEnglish)
 def englishToFrench():
     textToTranslate = request.args.get("Text to Translate")
-    french_text= translatore.english_to_french(textToTranslate)
+    french_text= translator.english_to_french(textToTranslate)
     return french_text
 
 @app.route("/")
 def renderindexpage():
-    return render_template("index .html")
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
