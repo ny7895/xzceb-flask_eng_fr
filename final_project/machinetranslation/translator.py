@@ -20,15 +20,16 @@ language_translator = LanguageTranslatorV3(
 language_translator.set_service_url = ("https://api.us-south.language-translator.watson.cloud.ibm.com/instances/d170e854-586c-4865-875f-4eb5350e0bbc")
 
 def english_to_french(english_text):
-    french_text = language_translator.translate(
-    text=english_text, 
-    model_id="en-fr").get_result()
+
+        french_text = language_translator.translate(
+        text=english_text, 
+        model_id="en-fr").get_result()
     return french_text['translations'][0]['translation'] 
 
 def french_to_english(french_text):  #This function wil translate from French to English
 #write the code here
-    english_text = language_translator.translate(
-    text=french_text, 
-    model_id="fr-en").get_result()
+        english_text = language_translator.translate(
+        text=french_text, 
+        model_id="fr-en").get_result()
     return english_text['translations'][0]['translation'] 
 
